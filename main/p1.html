@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navfoot</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-between; */
+            padding: 0 121px;
+            font-size: 1rem;
+            align-items: center;
+            background-color: black;
+        }
+
+        .navlogo {
+            display: flex;
+        }
+
+        .navlogo img {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+        }
+
+        .navi {
+            display: flex;
+            gap: 60px;
+
+
+        }
+
+        .navi a {
+            color: white;
+            text-decoration: none;
+            margin-left: 50px;
+
+        }
+
+        .navi2 {
+            display: flex;
+        }
+
+        .navi2 a {
+
+            color: white;
+            text-decoration: none;
+            margin-left: 26rem;
+        }
+
+        .flux {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin: 6rem 0;
+            padding: 0 25px;
+        }
+
+        /* .flux p{
+            display:flex;
+            margin:0;
+        }with the help of direct p tag */
+        .foot {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .i {
+            display: flex;
+            height: 50px;
+            width: 50px;
+            /* flex-direction: row; */
+             margin: 6rem 0;
+            padding: 0 25px;
+        } 
+
+            .mar {
+                margin: 4px;
+                font-size: 15px;
+                ;
+            }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navlogo">
+            <img src="../images/F.A.jpeg" alt="">
+        </div>
+        <div class="navi">
+            <a href="">Courses</a>
+            <a href="">Student Stories</a>
+            <a href="">Free Resources</a>
+            <a href="">About</a>
+        </div>
+        <div class="navi2">
+            <a href="">Login</a>
+
+        </div>
+    </nav>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est voluptatem aliquid quia sequi
+            consequatur recusandae et ipsa perferendis enim!</p>
+    </div>
+    <footer class="foot">
+        <div class="i">
+            <img src="../images/F.A.jpeg" alt="">
+        </div>
+        <div class="flux">
+            <p class="mar" id="f1">Proudly built with WebFlow</p>
+            <p class="mar" id="f2">c 2024 Flux Academy</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playwrite+NG+Modern:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* background-image: url("../images/night\ bg.jpg"); */
+
+        }
+
+        body {
+            background-image: url("../images/night\ bg.jpg");
+            /* height: 100vh; */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* font-family: "Poppins", sans-serif;
+             */
+             font-family: "Edu AU VIC WA NT Hand", cursive;
+
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        .navbar {
+            padding: 20px 30px;
+            color: white;
+            
+        }
+        h4{
+            font-size: 1.2rem;
+        }
+
+        .nav1 {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            padding: 20px 30px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav2 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin: 6rem;
+            font-size: 1.6rem;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: row;
+            color: rgb(24, 20, 20);
+            gap: 3.9rem;
+            padding: 8px 47px;
+            background-color: rgb(243, 239, 239);
+            border-radius: 5px;
+
+        }
+
+        #main {
+            margin: 0 10rem;
+            padding: 2rem;
+            background-color: #000000a1;
+            border-radius: 5px;
+        }
+
+
+        .form1 {
+            display: flex;
+            flex-direction: column;
+            gap:7px;
+        }
+        .form1 input{
+            background-color: rgb(243, 239, 239);
+            border: none;
+            outline:none;
+        }
+
+        #b1 {
+             border: none;
+            background-color: #bb1616;
+            color: white;
+            font-size: 12px;
+            border-radius: 4px;
+            padding: 8px 34px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <h4>TourTravel</h4>
+        </div>
+        <div class="nav1">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Packages</a>
+            <a href="#">Trending</a>
+            <a href="#">Contact us</a>
+        </div>
+
+    </nav>
+    <div class="nav2">
+        <h1>Exploring World with Us!</h1>
+    </div>
+    <div id="main">
+        <form>
+
+            <div class="form1">
+                <label>Where You want to go?</label>
+                <input type="text" placeholder="Zip cod/country codee">
+            </div>
+            <div class="form1">
+                <label>Check In</label>
+                <input type="text" placeholder="Check In">
+            </div>
+            <div class="form1">
+                <label>Check Out</label>
+                <input type="text" placeholder="Check out">
+            </div>
+            <div class="form1">
+                <label>How Many Are you? </label>
+                <input type="text" placeholder="Mention guest">
+            </div>
+            <div>
+                <button id="b1">Check Availablity</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            box-shadow: 1px 4px 28px rgba(0, 0, 0, 0.5);
+            width: 146%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .price_ratings {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 11px;
+        }
+
+        .price {
+            line-height: 4px;
+        }
+
+        .ratings {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: flex-end;
+            gap: 7px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        span {
+            color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrMM9bEeCI4NZ1-0we4X4Nx_Hh76GShByrg&s"
+                alt="">
+            <div class="price_ratings">
+                <div class="price">
+                    <p>for today</p>
+                    <h4>900</h4>
+                </div>
+                <div class="ratings">
+                    <div class="ratingStar">
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-half-fill"></i></span>
+
+
+                    </div>
+                    <div class="ratings_comments">
+                        <p>(4.5)</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
