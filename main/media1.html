@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWare Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* css of header */
+    nav {
+        background-image: url("../Images/header.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 43rem;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 19px;
+        color: white;
+        padding-top: 2rem;
+    }
+
+    .top h3 {
+        font-size: 24px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .heads {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 43px;
+        color: white;
+        margin-top: 8rem;
+    }
+
+    .formm {
+        padding: 2rem;
+        background-color: #0000008c;
+        margin: 5rem 13rem;
+        border-radius: 10px;
+
+    }
+
+    .form {
+        display: flex;
+        align-items: center;
+        color: rgb(13, 12, 12);
+        gap: 10px;
+        background-color: white;
+        width: 64rem;
+        border-radius: 10px;
+        margin: auto;
+        /* margin-top: 5rem; */
+        padding-left: 32px;
+        height: 5rem;
+    }
+
+    .f1 {
+        display: flex;
+        flex-direction: column;
+        line-height: 25px;
+    }
+
+    button {
+        background-color: #d22121;
+        border-radius: 4px;
+        border: none;
+        height: 3rem;
+        padding: 0 68px;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    input {
+        outline: none;
+        border: none;
+    }
+
+    /* css of trending  */
+    .container {
+        margin: 0rem 10rem;
+    }
+
+    .top1 {
+        display: flex;
+        align-items: center;
+        gap: 42rem;
+        margin-left: 1rem;
+        /* line-height: 11rem; */
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+        font-size: 28px;
+    }
+
+    .icon {
+        display: flex;
+        flex-direction: row;
+        gap: 13px;
+        font-size: 33px;
+    }
+
+    .icon i {
+        border: 2px solid rgba(0, 0, 0, 0.459);
+        border-radius: 25px;
+        padding: 2px
+    }
+
+    .image {
+        width: 21rem;
+        border-radius: 10px;
+    }
+
+    .card {
+        box-shadow: 0px 0px 5px #000000a8;
+        width: 23rem;
+        padding: 16px;
+        border-radius: 8px;
+
+    }
+
+    .head1 {
+        line-height: 7px;
+    }
+
+    h3 {
+        font-size: 21px;
+        line-height: 44px;
+    }
+
+    .head1 p {
+        color: grey;
+        font-size: 16px;
+    }
+
+    .price_rating {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+        padding-top: 2rem;
+    }
+
+    .price {
+        line-height: 30px;
+    }
+
+    .price p {
+        font-size: 17px;
+    }
+
+    .rating_star {
+        display: flex;
+        color: goldenrod;
+        font-size: 20px;
+        gap: 4px;
+    }
+
+    .rating_comment {
+        display: flex;
+        justify-content: end;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .days {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 20px;
+    }
+
+    .bottom i {
+        color: red;
+    }
+
+    .cancel {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 17px;
+        color: grey;
+        line-height: 43px;
+
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+    }
+
+    /* css of designation */
+
+    .grid1 {
+        display: grid;
+        grid-template-rows: repeat(2, 298px);
+        grid-template-columns: repeat(4, 280px);
+        gap: 1rem;
+    }
+
+    .image1 {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .div2 {
+        grid-area: 1 / 2 / 2 / 4;
+    }
+
+    /* css of best seller card  */
+    .card1 {
+        display: grid;
+        grid-template-columns: repeat(3, 0.29fr);
+    }
+
+    .para {
+        margin-top: 2rem;
+        text-align: center;
+        padding-left: 2rem;
+    }
+
+    .row {
+        box-shadow: 0px 0px 0px;
+        width: 18rem;
+        height: 20rem;
+    }
+
+    #btn {
+        /* background-color: rgb(205, 27, 27); */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 27px;
+    }
+
+    /* videobox starting */
+    .videobox {
+        background-image: url("../Images/tour.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 5rem;
+        /* display: flex; */
+        /* gap: 9rem; */
+        height: 30rem;
+    }
+
+    video {
+        border: 2px solid white;
+        border-radius: 10px;
+        height: 18rem;
+        transform: translate(33rem, 2rem);
+    }
+
+    .box {
+        display: ruby-text;
+        padding-left: 3rem;
+    }
+
+    .box h1 {
+        margin-top: 10rem;
+        color: white;
+        font-size: 40px;
+    }
+
+    /* css of tour guide */
+    .image2 {
+        height: 100%;
+        border-radius: 8px 8px 0 0;
+        width: 23rem;
+    }
+
+    .row1 {
+        box-shadow: 0 0 1px;
+        width: 23rem;
+        border-radius: 8px;
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        gap: 7.2rem;
+    }
+
+    .para1 {
+        margin: 15px 0;
+        margin-left: 19px;
+    }
+
+    #pg {
+        line-height: 22px;
+        color: grey;
+        margin-top: 0rem;
+        font-size: 17px;
+    }
+
+    .head h4 {
+        color: red;
+    }
+
+    /* css of client feedback */
+    .icon_head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .row2 {
+        box-shadow: 0 0 1px;
+        width: 23rem;
+        border-radius: 8px;
+        padding: 2rem;
+    }
+
+    #pg1 {
+        margin-top: 1rem;
+        font-size: 18px;
+        line-height: 22px;
+        color: grey;
+    }
+
+    .foot {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .foot1 {
+        line-height: 21px;
+    }
+
+    .foot1 p {
+        color: grey;
+    }
+
+    .foot img {
+        width: 4rem;
+        border-radius: 6rem;
+    }
+
+    .quot {
+        color: red;
+        font-size: 2rem;
+    }
+
+    /* css of subscribe$updated */
+    .container1 {
+        background-image: url("../Images/subscribe.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 18rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0;
+    }
+
+    .subscribe h1 {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .mains {
+        display: flex;
+        outline: none;
+        margin: 1rem;
+        background-color: white;
+        height: 4rem;
+        border: 2px solid white;
+        border-radius: 8px;
+
+    }
+
+    .mains input {
+        margin-left: 14px;
+        border: none;
+        outline: none;
+        width: 45rem;
+
+    }
+
+    #btn1 {
+        border: none;
+        /* background-color: rgb(220, 35, 35); */
+        border-radius: 6px;
+        width: 8rem;
+        margin: 4px;
+        padding: 2px;
+    }
+
+    /* css of footer */
+    .top_top {
+        display: flex;
+        gap: 11rem;
+
+    }
+
+    .col2 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .pg0 {
+        margin-top: 19px;
+        font-size: 17px;
+        color: grey;
+    }
+
+    .col2 {
+        display: flex;
+        flex-direction: column;
+        line-height: 33px;
+
+    }
+
+    .col4 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .bottom3 {
+        justify-content: center;
+        display: flex;
+        line-height: 20rem;
+    }
+
+    .col1 p {
+        width: 14rem;
+        line-height: 22px;
+    }
+
+    .icons_icons i {
+        padding: 5px;
+        border: 2px solid red;
+        border-radius: 27px;
+        background-color: red;
+        color: white;
+    }
+
+    @media (orientation:portait) {
+        .top{
+            flex-direction: column;
+        }
+        .heads{
+            font-size: 23px;
+        }
+        .form{
+            flex-direction: column;
+        }
+    }
+    
+</style>
+
+<body>
+    <!-- header starting -->
+    <nav>
+        <div class="top">
+            <h3>CodeWare</h3>
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="#">Trending</a>
+                <a href="#">Destinations</a>
+                <a href="#">Guide</a>
+                <a href="#">Client</a>
+            </div>
+        </div>
+        <div class="heads">
+            <h1>Explore the beauty of nature</h1>
+            <h1>Discover the new you</h1>
+        </div>
+        <div class="formm">
+            <div class="form">
+                <div class="f1">
+                    <label for="">Where You Want To Go?</label>
+                    <input type="text" placeholder="Country,ZIP">
+                </div>
+                <div class="f1">
+
+                    <label for="">Check In</label>
+                    <input type="text" placeholder="Choose a date">
+                </div>
+
+                <div class="f1">
+
+                    <label for="">Check Out</label>
+                    <input type="text" placeholder="Choose a date">
+                </div>
+
+                <div class="f1">
+
+                    <label for="">Guest</label>
+                    <input type="text" placeholder="Number Of Guest">
+                </div>
+                <button>Check Availability</button>
+
+            </div>
+        </div>
+    </nav>
+    <!-- header ending -->
+    <!-- trending start -->
+    <div class="container">
+        <div class="top1">
+            <h2>Trending 2024</h2>
+            <div class="icon">
+                <i class="ri-arrow-left-wide-line"></i>
+                <i class="ri-arrow-right-wide-line"></i>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <img src="../Images/trending-1.jpg" class="image">
+                <div class="head1">
+                    <h3>Mountain Hiking Tour</h3>
+                    <p>Hiking Out|Stoke On Trent</p>
+                </div>
+                <div class="price_rating">
+                    <div class="price">
+                        <p>From</p>
+                        <h2>$957.50</h2>
+                        <p>*price varies</p>
+                    </div>
+                    <div class="rating">
+                        <div class="rating_star">
+                            <span><i class="ri-star-s-fill"></i></span>
+                            <span> <i class="ri-star-s-fill"></i></span>
+                            <span><i class="ri-star-s-fill"></i></span>
+                            <span><i class="ri-star-half-s-line"></i></span>
+                            <span><i class="ri-star-s-line"></i></span>
+                        </div>
+                        <div class="rating_comment">
+                            <p>4.8(10)</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom">
+                    <div class="days">
+                        <i class="ri-time-line"></i>
+                        <p>7 Days</p>
+                    </div>
+                    <div class="cancel">
+                        <i class="ri-check-line"></i>
+                        <p>Free Cancellation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../Images/trending-2.jpg" class="image">
+                <div class="head1">
+                    <h3>Mountain Hiking Tour</h3>
+                    <p>Hiking Out|Stoke On Trent</p>
+                </div>
+                <div class="price_rating">
+                    <div class="price">
+                        <p>From</p>
+                        <h2>$957.50</h2>
+                        <p>*price varies</p>
+                    </div>
+                    <div class="rating">
+                        <div class="rating_star">
+                            <span><i class="ri-star-s-fill"></i></span>
+                            <span> <i class="ri-star-s-fill"></i></span>
+                            <span><i class="ri-star-s-fill"></i></span>
+                            <span><i class="ri-star-half-s-line"></i></span>
+                            <span><i class="ri-star-s-line"></i></span>
+                        </div>
+                        <div class="rating_comment">
+                            <p>4.8(10)</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom">
+                    <div class="days">
+                        <i class="ri-time-line"></i>
+                        <p>7 Days</p>
+                    </div>
+                    <div class="cancel">
+                        <i class="ri-check-line"></i>
+                        <p>Free Cancellation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../Images/trending-3.jpg" class="image">
+                <div class="head1">
+                    <h3>Mountain Hiking Tour</h3>
+                    <p>Hiking Out|Stoke On Trent</p>
+                </div>
+                <div class="price_rating">
+                    <div class="price">
+                        <p>From</p>
+                        <h2>$957.50</h2>
+                        <p>*price varies</p>
+                    </div>
+                    <div class="rating">
+                        <div class="rating_star">
+                            <span><i class="ri-star-s-fill"></i></span>
+                            <span> <i class="ri-star-s-fill"></i></span>
+                            <span><i class="ri-star-s-fill"></i></span>
+                            <span><i class="ri-star-half-s-line"></i></span>
+                            <span><i class="ri-star-s-line"></i></span>
+                        </div>
+                        <div class="rating_comment">
+                            <p>4.8(10)</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom">
+                    <div class="days">
+                        <i class="ri-time-line"></i>
+                        <p>7 Days</p>
+                    </div>
+                    <div class="cancel">
+                        <i class="ri-check-line"></i>
+                        <p>Free Cancellation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- trending ending -->
+    <!-- Top Designation staring(grid) -->
+    <div class="container">
+        <div class="top1">
+            <h2>Top Designations</h2>
+            <div class="icon">
+                <i class="ri-arrow-left-wide-line"></i>
+                <i class="ri-arrow-right-wide-line"></i>
+            </div>
+        </div>
+        <div class="grid1">
+            <div class="div1">
+                <img src="../Images/destination-1.jpg" class="image1">
+            </div>
+            <div class="div2">
+                <img src="../Images/destination-2.jpg" class="image1">
+            </div>
+            <div class="div3">
+                <img src="../Images/destination-3.jpg" class="image1">
+            </div>
+            <div class="div4">
+                <img src="../Images/destination-4.jpg" class="image1">
+            </div>
+            <div class="div5">
+                <img src="../Images/destination-5.jpg" class="image1">
+            </div>
+            <div class="div6">
+                <img src="../Images/destination-6.jpg" class="image1">
+            </div>
+        </div>
+    </div>
+    <!-- top designation ending -->
+    <!-- seller starting -->
+    <div class="container">
+        <div class="top1">
+            <h2>Best Seller</h2>
+            <button id="btn">Check All</button>
+        </div>
+        <div class="card1">
+            <div class="row">
+                <img src="../Images/seller-1.jpg" class="image">
+                <div class="para">
+                    <h4>Train Tour Skyline</h4>
+                    <p>Embark on a scenic railway adventure with Trains Tour Skyline</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="../Images/seller-2.jpg" class="image">
+                <div class="para">
+                    <h4>See Nature View</h4>
+                    <p>Where the ocean beauty meets your soul's serenity</p>
+                </div>
+            </div>
+            <div class="row">
+                <img src="../Images/seller-3.jpg" class="image">
+                <div class="para">
+                    <h4>Tokyo Market Ptr</h4>
+                    <p>Where Tradition Meets Modern Marvels in Every Aisle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- best seller ending -->
+    <!-- video box starting -->
+    <div class="videobox">
+        <div class="box">
+            <h1>Watch Out Video Tour</h1>
+        </div>
+        <video src="../Images/video.mp4" autoplay muted></video>
+
+    </div>
+    <!-- video box ending -->
+    <!-- guide starting -->
+    <div class="container">
+        <div class="top1">
+            <h2>Tour Guide</h2>
+            <div class="icon">
+                <i class="ri-arrow-left-wide-line"></i>
+                <i class="ri-arrow-right-wide-line"></i>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="row1">
+                <div class="imgs">
+                    <img src="../Images/guide-1.jpg" class="image2">
+                </div>
+                <div class="para1">
+                    <div class="head">
+                        <h3>Elias Hossain</h3>
+                        <h4>Forest Guide</h4>
+                    </div>
+                    <p id="pg">With a deep passion for forests,our experts are committed to craft immersive experiences
+                        to
+                        connect with the wilderness</p>
+                </div>
+            </div>
+            <div class="row1">
+                <div class="imgs">
+                    <img src="../Images/guide-2.jpg" class="image2">
+                </div>
+                <div class="para1">
+                    <div class="head">
+                        <h3>Elias Hossain</h3>
+                        <h4>Forest Guide</h4>
+                    </div>
+                    <p id="pg">With a deep passion for forests,our experts are committed to craft immersive experiences
+                        to
+                        connect with the wilderness</p>
+                </div>
+            </div>
+            <div class="row1">
+                <div class="imgs">
+                    <img src="../Images/guide-3.jpg" class="image2">
+                </div>
+                <div class="para1">
+                    <div class="head">
+                        <h3>Elias Hossain</h3>
+                        <h4>Forest Guide</h4>
+                    </div>
+                    <p id="pg">With a deep passion for forests,our experts are committed to craft immersive experiences
+                        to connect with the wilderness</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- guide page ending -->
+    <!-- client feedback page starting -->
+    <div class="container">
+        <div class="top1">
+            <h2>Client Feedback</h2>
+            <div class="icon">
+                <i class="ri-arrow-left-wide-line"></i>
+                <i class="ri-arrow-right-wide-line"></i>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="row2">
+                <div class="icon_head">
+                    <div class="quot">
+                        <i class="ri-double-quotes-r"></i>
+                    </div>
+                    <div class="rating_star">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                </div>
+                <p id="pg1"> I had the most incredible experience using this tour and travel website. From booking my
+                    flights and
+                    accommodations to discovering unique local activities, everything was seamless and well-organized.
+                    It made my trip stress-free and unforgettable. I can't wait to plan my next adventure with them!
+                </p>
+                <div class="foot">
+                    <img src="../Images/client-1.jpg">
+                    <div class="foot1">
+                        <h4>Mike Henderson</h4>
+                        <p>Business Manager & CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="icon_head">
+                    <div class="quot">
+                        <i class="ri-double-quotes-r"></i>
+                    </div>
+                    <div class="rating_star">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                </div>
+                <p id="pg1"> I had the most incredible experience using this tour and travel website. From booking my
+                    flights and
+                    accommodations to discovering unique local activities, everything was seamless and well-organized.
+                    It made my trip stress-free and unforgettable. I can't wait to plan my next adventure with them!
+                </p>
+                <div class="foot">
+                    <img src="../Images/client-1.jpg">
+                    <div class="foot1">
+                        <h4>Mike Henderson</h4>
+                        <p>Business Manager & CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="icon_head">
+                    <div class="quot">
+                        <i class="ri-double-quotes-r"></i>
+                    </div>
+                    <div class="rating_star">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                </div>
+                <p id="pg1"> I had the most incredible experience using this tour and travel website. From booking my
+                    flights and
+                    accommodations to discovering unique local activities, everything was seamless and well-organized.
+                    It made my trip stress-free and unforgettable. I can't wait to plan my next adventure with them!
+                </p>
+                <div class="foot">
+                    <img src="../Images/client-1.jpg">
+                    <div class="foot1">
+                        <h4>Mike Henderson</h4>
+                        <p>Business Manager & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- client feedback ending -->
+    <!-- subscribe bg starting -->
+    <div class="container1">
+        <div class="subscribe">
+            <h1>Subscribe and be Updated</h1>
+        </div>
+        <div class="mains">
+            <input type="email" placeholder="Please enter your email address">
+            <button id="btn1">Subscribe</button>
+        </div>
+    </div>
+    <!-- subscribe bg ending -->
+    <!-- footer starting -->
+    <div class="container">
+        <div class="top_top">
+            <div class="col1">
+                <h2>CodeWare</h2>
+                <p class="pg0">Welcome to CodeWare, our tour and travel website is your gateway to a world of
+                    CodeWare-inducing experiences.</p>
+            </div>
+            <div class="col2">
+                <h2>Quick Links</h2>
+                <a href="#">Home</a>
+                <a href="#">Destinations</a>
+                <a href="#">Write to us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="col2">
+                <h2>Features</h2>
+                <a href="#">Vacation Package </a>
+                <a href="#">List of Tours</a>
+                <a href="#">Gallery</a>
+                <a href="#">Travel on a Budget</a>
+
+            </div>
+            <div class="col4">
+                <h2>Follow Us</h2>
+                <div class="icons_icons">
+                    <!-- <i class="ri-twitter-line"></i> -->
+                    <i class="ri-twitter-fill"></i>
+                    <!-- <i class="fa-brands fa-square-twitter"></i> -->
+                    <i class="ri-linkedin-fill"></i>
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-facebook-fill"></i>
+                </div>
+            </div>
+        </div>
+        <div class="bottom3">
+            <p class="pg0">Copyright © 2024 Web Art By CodeWare IT Pvt. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- footer ending -->
+</body>
+
+</html>
